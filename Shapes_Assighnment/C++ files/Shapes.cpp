@@ -3,23 +3,24 @@ using namespace std;
 
 class Shapes                        //Defining the shape class
 {
-private:
-    int length, width, area, perimeter;
 public:
-    void getDimensions()
+    void getDimensions() //getting length and width from user
     {
+        int length, width;
         cout<<"Enter the length"<< endl;
         cin>>length;
         cout<<"Enter the width"<< endl;
         cin>>width;
+        compute(length, width); //calling the compute function
     }
-    void compute()
+    void compute(int length, int width) //function to calculate area and perimeter
     {
-        //Area
+        int area, perimeter;
         area = length*width;
         perimeter = 2*(length+width);
+        display(area, perimeter); //Calling the display function
     }
-    void display()
+    void display(int area, int perimeter) //Displaying area and perimeter values
     {
         cout<<"Area: " << area<< endl;
         cout<<"Perimeter: " << perimeter<< endl;
@@ -28,9 +29,7 @@ public:
 
 int main()
 {
-    Shapes shapeobj;
-    shapeobj.getDimensions();
-    shapeobj.compute();
-    shapeobj.display();
+    Shapes shapeobj; //creating "shapesobj" object
+    shapeobj.getDimensions(); //calling the getDimensions function
     return 0;
 }
