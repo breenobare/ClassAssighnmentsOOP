@@ -21,11 +21,12 @@ protected:
     }
 };
 class Rectangle : public Shapes{
+    //I created two getter functions and set them to public so they can be accessed from outside the class
     public:
-    void setDimensions(){
+    void setDimensions(){ //get dimmensions
         takeDimensions();
     }
-    float getArea(){
+    float getArea(){ //get area
         return findArea();
     }
 
